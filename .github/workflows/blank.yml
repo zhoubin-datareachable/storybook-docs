@@ -23,15 +23,12 @@ jobs:
       # 安装依赖
       - name: Install dependencies
         run: |
-          ls
-          cd development
-          ls
           yarn
           npm run build-storybook
 
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@4.0.0
-      #   with:
-      #     token: ${{ secrets.ACCESS_TOKEN }}
-      #     branch: gh-pages
-      #     folder: storybook-static
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: storybook-static
