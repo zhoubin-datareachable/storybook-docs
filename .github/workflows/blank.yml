@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-        repository: "dataReachable/dr_Front_ComponentStoryBook"
-        path: development
-        token: ${{ secrets.ACCESS_TOKEN }}
+          repository: "dataReachable/dr_Front_ComponentStoryBook"
+          path: development
+          token: ${{ secrets.ACCESS_TOKEN }}
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
