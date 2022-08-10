@@ -27,7 +27,7 @@ jobs:
       # 安装依赖
       - name: Install dependencies
         run: |
-          cp -Rf main ./
+          cp -Rf main .
           sed -i "s/<html lang="en"><head>/<html lang="en"><head><link rel="icon" href="favicon.ico" type="image/x-icon" />/g" storybook-static/index.html
           yarn
           npm run build-storybook
