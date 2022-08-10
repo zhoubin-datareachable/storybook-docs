@@ -16,6 +16,10 @@ jobs:
           repository: dataReachable/dr_Front_ComponentStoryBook
           ref: development
           token: ${{ secrets.ACCESS_TOKEN }}
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+          path: main
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -23,6 +27,7 @@ jobs:
       # 安装依赖
       - name: Install dependencies
         run: |
+          cp -Rf main/public ./
           yarn
           npm run build-storybook
 
