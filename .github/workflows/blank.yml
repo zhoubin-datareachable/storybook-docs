@@ -27,10 +27,10 @@ jobs:
       # 安装依赖
       - name: Install dependencies
         run: |
-          cp -Rf favicon.ico public
-          sed -i "s/<html lang="en"><head>/<html lang="en"><head><link rel="icon" href="favicon.ico" type="image/x-icon" />/g" storybook-static/index.html
+          cp -Rf main/public ./
           yarn
           npm run build-storybook
+          sed -i "s/<html lang="en"><head>/<html lang="en"><head><link rel="icon" href="favicon.ico" type="image/x-icon" />/g" storybook-static/index.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
