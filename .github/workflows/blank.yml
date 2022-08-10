@@ -30,7 +30,7 @@ jobs:
           cp -Rf main/public ./
           yarn
           npm run build-storybook
-          sed -i "s/<head>/<head><link rel='icon' href='favicon.ico' type='image/x-icon' />/g" storybook-static/index.html
+          sed -i "s/\<head\>/\head\>\<link rel='icon' href='favicon.ico' type='image\/x-icon'/g" storybook-static/index.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
