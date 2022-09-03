@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           cp -Rf main/public ./
-          yarn
+          npm install
           npm run build-storybook
           sed -i "s/\<head\>/\head\>\<link rel='icon' href='favicon.ico' type='image\/x-icon'/g" storybook-static/index.html
 
